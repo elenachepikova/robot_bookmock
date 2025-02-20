@@ -14,6 +14,10 @@ ${Picture}              css:.gallery-media-wrapper
 
 
 *** Keywords ***
+Open About page
+    Open Browser                ${Domain}       ${Browser}
+    Maximize Browser Window
+
 Verify ABOUT page is opened
     Wait Until Location Is              ${Domain}/about
     Title Should Be                     ABOUT | ${Title}
