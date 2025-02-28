@@ -1,12 +1,12 @@
 *** Settings ***
 Documentation       Navigation panel suite
 
-Resource            ../Resources/PageObjects/HomePage.robot
-Resource            ../Resources/PageObjects/AboutPage.robot
-Resource            ../Resources/PageObjects/ShopPage.robot
-Resource            ../Resources/PageObjects/NavigationPanelElement.robot
-Resource            ../Resources/PageObjects/Cart.robot
-Resource            ../Resources/Common.robot
+Resource            ../Resources/PageObjects/HomePage.resource
+Resource            ../Resources/PageObjects/AboutPage.resource
+Resource            ../Resources/PageObjects/ShopPage.resource
+Resource            ../Resources/PageObjects/NavigationPanelElement.resource
+Resource            ../Resources/PageObjects/Cart.resource
+Resource            ../Resources/Common.resource
 
 Test Setup          Start Test
 Test Teardown       End Test
