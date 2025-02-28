@@ -1,10 +1,7 @@
-Domain = "https://elenachepikova.website3.me"
-Browser = "Chrome"
-Title = "elenachepikova.website3.me"
-NotFoundMessage = (
+DOMAIN = "https://elenachepikova.website3.me"
+BROWSER = "Chrome"
+TITLE = "elenachepikova.website3.me"
+NOT_FOUND_MESSAGE = (
     "No products matched your search criteria. Try widening your search."
 )
-
-HomePageBannerText = "Welcome to BookMock!"
-RecentReviewsTitleText = "RECENT REVIEWS"
-AboutUsBannerText = "ABOUT US\nLearn more about what we do"
+RECENT_REVIEWS_SECTION_TEXT = "RECENT REVIEWS"

@@ -1,20 +1,50 @@
 *** Settings ***
-Documentation    Navigating through BookMock pages
-Library          SeleniumLibrary
-Resource         ../Resources/PageObjects/HomePage.robot
-Resource         ../Resources/PageObjects/AboutPage.robot
-Resource         ../Resources/PageObjects/ShopPage.robot
-Resource         ../Resources/NavigationPanelElement.robot
+Documentation       Navigation panel suite
+
+Resource            ../Resources/PageObjects/HomePage.resource
+Resource            ../Resources/PageObjects/AboutPage.resource
+Resource            ../Resources/PageObjects/ShopPage.resource
+Resource            ../Resources/PageObjects/NavigationPanelElement.resource
+Resource            ../Resources/PageObjects/Cart.resource
+Resource            ../Resources/Common.resource
+
+Test Setup          Start Test
+Test Teardown       End Test
+
 
 *** Test Cases ***
-Open ABOUT page via navigation panel
-    Open Homepage
-    Navigate To ABOUT Page
-    Verify ABOUT page is opened
-    Close Browser
+Open About Page Via Navigation Panel
+    [Tags]    smoke
+    Open Home Page
+    Navigate To About Page
+    Verify About Page Is Opened
 
-Click on SHOP NOW button opens SHOP page
-    Open Homepage
-    Click on SHOP NOW button
-    Verify SHOP page is opened
-    Close Browser
+Open Shop Page Via Navigation Panel
+    [Tags]    smoke
+    Open Home Page
+    Navigate To Shop Page
+    Verify Shop Page Is Opened
+
+Open Home Page Via Navigation Panel
+    [Tags]    smoke
+    Open About Page
+    Navigate To Home Page
+    Verify Home Page Is Opened
+
+Click On Site Logo Redirects To Home page
+    [Tags]    regression
+    Open About Page
+    Click On Site Logo
+    Verify Home Page Is Opened
+
+Click on Shop Now Button To Open Shop Page
+    [Tags]    regression
+    Open Home Page
+    Click On Shop Now Button
+    Verify Shop Page Is Opened
+
+Cart Icon Opens Cart Sidebar
+    [Tags]    regression
+    Open Home Page
+    Open Cart
+    Verify Empty Cart Is Opened
