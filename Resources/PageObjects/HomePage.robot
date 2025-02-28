@@ -15,9 +15,8 @@ ${SearchAndFilterButton}    css:.d-block
 
 
 *** Keywords ***
-Open Home page
-    Open Browser                ${Domain}       ${Browser}
-    Maximize Browser Window
+Open HOME page
+    Go To                               ${Domain}
 
 Verify HOME page is opened
     Wait Until Location Is              ${Domain}/

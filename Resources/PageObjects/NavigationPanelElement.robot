@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
-Variables  TestData/TestData.py
+Variables  ../TestData/TestData.py
+
 
 *** Variables ***
 ${NavigationPanel}                  id:bb-header-spacing
