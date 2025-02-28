@@ -1,48 +1,50 @@
 *** Settings ***
-Documentation    Navigation panel suite
-Resource         ../Resources/PageObjects/HomePage.robot
-Resource         ../Resources/PageObjects/AboutPage.robot
-Resource         ../Resources/PageObjects/ShopPage.robot
-Resource         ../Resources/PageObjects/NavigationPanelElement.robot
-Resource         ../Resources/PageObjects/Cart.robot
-Resource         ../Resources/Common.robot
-Test Setup       Start Test
-Test Teardown    End Test
+Documentation       Navigation panel suite
+
+Resource            ../Resources/PageObjects/HomePage.robot
+Resource            ../Resources/PageObjects/AboutPage.robot
+Resource            ../Resources/PageObjects/ShopPage.robot
+Resource            ../Resources/PageObjects/NavigationPanelElement.robot
+Resource            ../Resources/PageObjects/Cart.robot
+Resource            ../Resources/Common.robot
+
+Test Setup          Start Test
+Test Teardown       End Test
 
 
 *** Test Cases ***
-Open ABOUT page via navigation panel
-    [Tags]          smoke
-    Open HOME page
-    Navigate To ABOUT Page
-    Verify ABOUT page is opened
+Open About Page Via Navigation Panel
+    [Tags]    smoke
+    Open Home Page
+    Navigate To About Page
+    Verify About Page Is Opened
 
-Open SHOP page via navigation panel
-    [Tags]          smoke
-    Open HOME page
-    Navigate To SHOP Page
-    Verify SHOP page is opened
+Open Shop Page Via Navigation Panel
+    [Tags]    smoke
+    Open Home Page
+    Navigate To Shop Page
+    Verify Shop Page Is Opened
 
-Open HOME page via navigation panel
-    [Tags]          smoke
-    Open ABOUT Page
-    Navigate To HOME Page
-    Verify HOME page is opened
+Open Home Page Via Navigation Panel
+    [Tags]    smoke
+    Open About Page
+    Navigate To Home Page
+    Verify Home Page Is Opened
 
-Click on site logo redirects to HOME page
-    [Tags]          regression
-    Open ABOUT Page
-    Click on site logo
-    Verify HOME page is opened
+Click On Site Logo Redirects To Home page
+    [Tags]    regression
+    Open About Page
+    Click On Site Logo
+    Verify Home Page Is Opened
 
-Click on SHOP NOW button to open SHOP page
-    [Tags]          regression
-    Open HOME page
-    Click on SHOP NOW button
-    Verify SHOP page is opened
+Click on Shop Now Button To Open Shop Page
+    [Tags]    regression
+    Open Home Page
+    Click On Shop Now Button
+    Verify Shop Page Is Opened
 
-CART icon opens Cart sidebar
-    [Tags]          regression
-    Open HOME page
+Cart Icon Opens Cart Sidebar
+    [Tags]    regression
+    Open Home Page
     Open Cart
-    Verify empty Cart is opened
+    Verify Empty Cart Is Opened
